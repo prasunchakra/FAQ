@@ -1,3 +1,11 @@
 faqenv
-*/__pycache__
-db.sqlite3
+# Ignore Python cache files and directories
+**/__pycache__/
+*.py[cod]
+
+# Ignore .env file
+.env
+
+# Ignore .DS_Store file
+.DS_Store
+

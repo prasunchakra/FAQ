@@ -1,0 +1,11 @@
+asgiref==3.8.1
+Django==4.2.16
+django-debug-toolbar==4.4.6
+environ==1.0
+environs==11.2.1
+marshmallow==3.23.1
+mysqlclient==2.2.6
+packaging==24.2
+python-dotenv==1.0.1
+sqlparse==0.5.2
+typing_extensions==4.12.2
