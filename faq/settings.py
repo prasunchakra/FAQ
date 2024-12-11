@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from datetime import timedelta
 from pathlib import Path
 import environs
 
@@ -40,11 +41,24 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-# LOCAL_APPS = [
-#     'apps.users',
-#     'apps.questions',
-# ]
-INSTALLED_APPS = DJANGO_APPS 
+
+THIRD_PARTY_APPS = [
+    'rest_framework',
+   'rest_framework_simplejwt',
+]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

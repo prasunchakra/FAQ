@@ -1,0 +1,20 @@
+### Test Signup API
+POST http://127.0.0.1:8000/user/signup/
+Content-Type: application/json
+
+{
+    "username": "John1",
+    "password": "securepassword123",
+    "email": "john1@example.com",
+    "first_name": "John",
+    "last_name": "Doe"
+}
+
+### Test SignIn API
+POST http://127.0.0.1:8000/user/signin/
+Content-Type: application/json
+
+{
+    "username": "John1",
+    "password": "securepassword123"
+}
